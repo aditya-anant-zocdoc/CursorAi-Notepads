@@ -1,0 +1,1 @@
+# CursorAi-Notepads
