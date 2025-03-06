@@ -44,44 +44,43 @@ import { spacers } from '@zocdoc-mezzanine/foundations-layout
    - Find: `property: Xpx;`
    - Replace: `property: ${spacers.$X};`
    Example:
-   ```typescript
+  
    // Before: padding: 16px;
    // After:  padding: ${spacers.$16};
-   ```
+   
 
 3. Compound Values:
    - Find: `property: Xpx Ypx;`
    - Replace: `property: ${spacers.$X} ${spacers.$Y};`
    Example:
-   ```typescript
+ 
    // Before: padding: 12px 16px;
    // After:  padding: ${spacers.$12} ${spacers.$16};
-   ```
+  
 
 4. Variable Declarations:
    - Find: `const NAME = Xpx;`
    - Replace: `const NAME = spacers.$X;`
    Example:
-   ```typescript
+ 
    // Before: const ICON_MARGIN = 8;
    // After:  const ICON_MARGIN = spacers.$8;
-   ```
+ 
 
 5. Template Literal Updates:
    - Find: `${value}px`
    - Replace: `${spacers.$value}`
    Example:
-   ```typescript
    // Before: gap: ${ICON_MARGIN}px
    // After:  gap: ${spacers.$8}
-   ```
+
 
 6. Math Operations:
    When tokens are used in calculations:
-   ```typescript
+  
    // Before: padding: (8 + 4)px;
    // After:  padding: calc(${spacers.$8} + ${spacers.$4});
-   ```
+   
 
 ## Validation Steps
 1. Check imports are correct
@@ -92,21 +91,22 @@ import { spacers } from '@zocdoc-mezzanine/foundations-layout
 
 ## Common Patterns
 1. Direct replacements:
-   ```typescript
+  
    margin: 16px;        → margin: ${spacers.$16};
    padding: 8px 16px;   → padding: ${spacers.$8} ${spacers.$16};
    gap: 8px;           → gap: ${spacers.$8};
-   ```
+  
 
 2. Keep as-is:
-   ```typescript
+   
    width: 16px;        // dimensional - keep
    margin: -1px;       // negative - keep
    border-radius: 2px; // border radius - keep
-   ```
+  
 
 ## Testing
 1. Visual regression testing
 2. Component spacing verification
 3. Responsive layout checks
+
 ```
