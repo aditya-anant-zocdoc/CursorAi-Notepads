@@ -1,0 +1,17 @@
+Create an __WIP__{ComponentName}_RegressionTesting-story.tsx file for each of the following Mezzanine components: @Flag.tsx 
+
+Requirements:
+	•	Use existing Mezzanine WIP regression testing story structure.
+	•	Test all prop combinations using cartesianProduct or hardcoded permutations.
+	•	Clearly label each rendered variation (e.g., prop1:true | prop2:false).
+	•	Use layout containers (StoryContainer, Container, etc.) for display.
+	•	Add the following parameters block:
+```
+parameters: {
+  viewMode: 'canvas',
+  previewTabs: {
+    'storybook/docs/panel': { hidden: true },
+  },
+  percy: { skip: true },
+}
+```

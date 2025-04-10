@@ -1,0 +1,22 @@
+Create an __WIP__{ComponentName}_Playground-story.tsx file for each of the following Mezzanine components: @Flag.tsx 
+
+Requirements:
+	•	Refer existing Mezzanine WIP Playground story format.
+	•	Define argTypes for interactive props using proper controls (text, boolean, select).
+	•	Create a default export with component metadata.
+	•	Export Playground story using arrow function
+	•	Use Playground.args to pass argumnets to story
+	•	Include the following parameters:
+```
+<Meta
+  title="Mezzanine/WIP/ComponentName/Recipes"
+  component={YourComponent}
+parameters: {
+  viewMode: 'canvas',
+  previewTabs: {
+    'storybook/docs/panel': { hidden: true },
+  },
+  percy: { skip: true },
+}
+/>
+```

@@ -1,0 +1,108 @@
+Mezzanine WIP Story Creation Prompt
+
+Create the following **WIP story files** for each of the listed Mezzanine components: [ComponentName(s)]
+
+Story Files to Generate
+
+1. `__WIP__{ComponentName}_Overview-story.mdx`
+2. `__WIP__{ComponentName}_Recipes-story.mdx`
+3. `__WIP__{ComponentName}_Playground-story.tsx`
+4. `__WIP__{ComponentName}_RegressionTesting-story.tsx`
+
+---
+
+1. Create an **WIP**{ComponentName}\_Overview-story.mdx file for each of the following Mezzanine components
+
+Requirements:
+• Refer existing Mezzanine WIP Overview format from other component overview stories.
+• Include [Summary] and [Guidelines] placeholders.
+• Include Github, Figma, and Jira placeholder links.
+• Render ArgsTable with the component API.
+• Show one interactive story using <Canvas> and <Story> with default props.
+• Add the following Meta configuration:
+
+```
+<Meta
+  title="Mezzanine/WIP/ComponentName/Overview"
+  component={YourComponent}
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true }
+    },
+    percy: { skip: true }
+  }}
+/>
+```
+
+2. Recipes Story (**WIP**{ComponentName}\_Recipes-story.mdx)
+
+Requirements:
+• Follow existing Mezzanine WIP Recipes story format.
+• Include:
+• Only one realistic usage example
+• Minimal props
+• Use of <Canvas> and <Story>
+
+Meta Configuration:
+
+```jsx
+<Meta
+  title="Mezzanine/WIP/ComponentName/Recipes"
+  component={YourComponent}
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: {hidden: true},
+    },
+    percy: {skip: true},
+  }}
+/>
+```
+
+3. Playground Story (**WIP**{ComponentName}\_Playground-story.tsx)
+
+Requirements:
+• Follow existing Mezzanine WIP Playground format.
+• Define argTypes using appropriate controls (text, boolean, select).
+• Export story using arrow function and assign props via .args.
+
+tsx```
+export default {
+title: 'Mezzanine/WIP/ComponentName/Playground',
+component: YourComponent,
+parameters: {
+viewMode: 'canvas',
+previewTabs: {
+'storybook/docs/panel': { hidden: true },
+},
+percy: { skip: true },
+},
+argTypes: {
+// Define props and controls here
+},
+};
+
+```
+
+4. Regression Testing Story (__WIP__{ComponentName}_RegressionTesting-story.tsx)
+
+Requirements:
+	•	Use existing Mezzanine WIP regression testing format.
+	•	Cover all prop permutations using cartesianProduct or hardcoded combinations.
+	•	Label each variation clearly (prop1: true | prop2: false).
+	•	Use layout components for clean display (StoryContainer, Container, etc.)
+
+```
+
+parameters: {
+viewMode: 'canvas',
+previewTabs: {
+'storybook/docs/panel': { hidden: true },
+},
+percy: { skip: true },
+}
+
+```
+
+```

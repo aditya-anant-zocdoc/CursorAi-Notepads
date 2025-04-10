@@ -1,0 +1,22 @@
+Create an __WIP__{ComponentName}_Recipes-story.mdx file for each of the following Mezzanine components: @Flag.tsx 
+
+Requirements:
+	•	Refer existing Mezzanine WIP Recipes story format.
+	•	Add only one basic usage example with realistic default props.
+	•	Use <Canvas> and <Story> for rendering.
+	•	Keep examples minimal and focused.
+	•	Add the following Meta configuration:
+```
+<Meta
+  title="Mezzanine/WIP/Category/ComponentName/Recipes"
+  component={YourComponent}
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: { 
+      canvas: { hidden: true } 
+    },
+    percy: { skip: true }
+  }}
+/>
+```
+

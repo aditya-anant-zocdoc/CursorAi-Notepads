@@ -1,0 +1,23 @@
+Create an **WIP**{ComponentName}\_Overview-story.mdx file for each of the following Mezzanine components: @Flag.tsx
+
+Requirements:
+• Refer Mezzanine WIP Overview format from other component overview stories.
+• Include [Summary] and [Guidelines] placeholders.
+• Include Github, Figma, and Jira placeholder links.
+• Render ArgsTable with the component API.
+• Show one interactive story using <Canvas> and <Story> with default props.
+• Add the following Meta configuration:
+
+```
+<Meta
+  title="Mezzanine/WIP/ComponentName/Overview"
+  component={YourComponent}
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true }
+    },
+    percy: { skip: true }
+  }}
+/>
+```
